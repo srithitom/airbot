@@ -41,7 +41,7 @@ if (!is_null($events['events'])) {
 	    				// output data of each row
 	    				while($row = $result->fetch_assoc()) {
 						$user = json_decode($row['data']);
-					$respMessage = 'จำนวนคนตอบว่ำเพื่อน = '.$user->name;
+					$respMessage = 'จำนวนคนตอบว่ำเพื่อน = '.$user->name[1];
 					}
 					}
 					break;
