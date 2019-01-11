@@ -41,6 +41,7 @@ if (!is_null($events['events'])) {
 						//$res = $DB->query('SELECT COUNT(*) FROM table');
 						$num_rows = $result->fetchColumn(); 
 					}
+						echo $result;
 					$respMessage = 'จำนวนคนตอบว่ำเพื่อน = '.$num_rows; 
 					break;
 					
