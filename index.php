@@ -36,13 +36,14 @@ if (!is_null($events['events'])) {
 					case '1':
 					$sql = sprintf("SELECT * FROM appointments");
 					$result = $connection->query($sql);
-
-					if($result){ 
-						$amount = $result->rowCount(); 
+					
+					if ($result->num_rows > 0) {
+	    				// output data of each row
+	    				while($row = $result->fetch_assoc()) {
+						$user = json_decode($row['data']);
+					$respMessage = 'จำนวนคนตอบว่ำเพื่อน = '.$user->name;
 					}
-					
-					
-					$respMessage = 'จำนวนคนตอบว่ำเพื่อน = '.$result[0]; 
+					}
 					break;
 					
 					default: 
