@@ -23,8 +23,7 @@ if (!is_null($events['events'])) {
 
 			// Get replyToken 
 			$replyToken = $event['replyToken'];
-			
-			try { 
+			 
 			// Check to see user already answer 
 				$host = 'ec2-54-243-212-227.compute-1.amazonaws.com'; 
 				$dbname = 'derp1q2mqmgk73'; 
@@ -35,7 +34,7 @@ if (!is_null($events['events'])) {
 				switch($event['message']['text']) { 
 
 					case '1':
-					$sql = sprintf("SELECT * FROM category");
+					$sql = sprintf("SELECT * FROM appointments");
 					$result = $connection->query($sql);
 
 					if($result){ 
