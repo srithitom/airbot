@@ -36,7 +36,6 @@ if (!is_null($events['events'])) {
 					case '1':
 					$sql = sprintf("SELECT * FROM appointments");
 					$result = $connection->query($sql);
-					echo .$result;
 					
 					if($result){ 
 						//$res = $DB->query('SELECT COUNT(*) FROM table');
@@ -59,4 +58,4 @@ if (!is_null($events['events'])) {
 	} 
 } 
 
-echo $result;
+echo "OK";
