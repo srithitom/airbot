@@ -36,13 +36,13 @@ if (!is_null($events['events'])) {
 					case '1':
 					$sql = sprintf("SELECT * FROM appointments");
 					$result = $connection->query($sql);
+					echo .$result;
 					
 					if($result){ 
 						//$res = $DB->query('SELECT COUNT(*) FROM table');
-						$num_rows = $result->fetchColumn(); 
+						$amount = $result->rowCount(); 
 					}
-						echo $result;
-					$respMessage = 'จำนวนคนตอบว่ำเพื่อน = '.$num_rows; 
+					$respMessage = 'จำนวนคนตอบว่ำเพื่อน = '.$amount; 
 					break;
 					
 					default: 
