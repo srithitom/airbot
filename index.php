@@ -27,10 +27,10 @@ if (!is_null($events['events'])) {
 			switch($event['message']['text']) { 
 
 				case 'tel':
-					$servername = "www.jbbyair.site";
-					$username = "root";
-					$password = "123456totar";
-					$dbname = "ecom";
+					$servername = '35.240.137.234';
+					$username = 'root";
+					$password = '123456totar';
+					$dbname = 'ecom';
 					// Create connection
 					$conn = new mysqli($servername, $username, $password, $dbname);
 					// Check connection
