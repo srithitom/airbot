@@ -34,10 +34,9 @@ if (!is_null($events['events'])) {
 					$query = 'SELECT * FROM appointments';
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
-					while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
-						foreach ($line as $col_value) {
-					$respMessage = 'จำนวนคนตอบว่ำเพื่อน = '.$col_value[$line];
-						}}
+					$line = pg_fetch_array($result)
+					$mes = 'จำนวนคนตอบว่ำเพื่อน = '.$line[0]'\n\r' .$line[1];
+					$respMessage = 'จำนวนคนตอบว่ำเพื่อน = '.$mes;
 					break;
 					
 					default: 
