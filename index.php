@@ -38,7 +38,7 @@ if (!is_null($events['events'])) {
 					$result = $connection->query($sql);
 					
 					if($result){ 
-						$amount = $result->colCount(); 
+						$amount = $result->rowCount(); 
 					}
 					$respMessage = 'จำนวนคนตอบว่ำเพื่อน = '.$amount; 
 					break;
