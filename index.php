@@ -22,33 +22,32 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') { 
 
 			// Get replyToken 
-			$replyToken = $event['replyToken']; 
-
-			// Split message then keep it in database. 
-			$appointments = explode(',', $event['message']['text']); 
-
-			if(count($appointments) == 2) { 
-
+			$replyToken = $event['replyToken'];
+			
+			try { 
+			// Check to see user already answer 
 				$host = 'ec2-54-243-212-227.compute-1.amazonaws.com'; 
 				$dbname = 'derp1q2mqmgk73'; 
 				$user = 'qhfmxvhvaduhkw';
-				$pass = '90b8104676e32efd9c1d98b72f3aba4c314ce0b9d6e82234f6c9fb56e6c60bd2'; 
-				$connection = new PDO("pgsql:host=$host;dbname=$dbname", $user, $pass); 
+				$pass = '90b8104676e32efd9c1d98b72f3aba4c314ce0b9d6e82234f6c9fb56e6c60bd2';
+				$connection = new PDO("pgsql:host=$host;dbname=$dbname", $user, $pass);
 
-				$params = array( 
-					'time' => $appointments[0], 
-					'content' => $appointments[1],
-				); 
+				switch($event['message']['text']) { 
 
-				$statement = $connection->prepare("INSERT INTO appointments (time, content) VALUES (:time, :content)"); 
+					case '1':
+					$sql = sprintf("SELECT * FROM category");
+					$result = $connection->query($sql);
 
-				$result = $statement->execute($params); 
-
-				$respMessage = 'Your appointment has saved.'; 
-			}else{ 
-				$respMessage = 'You can send appointment like this "12.00,House keeping." '; 
-			} 
-
+					if($result){ 
+						$amount = $result->rowCount(); 
+					}
+					$respMessage = 'จำนวนคนตอบว่ำเพื่อน = '.$amount; 
+					break;
+					
+					default: 
+					$respMessage = " บุคคลที่โทรหำบ่อยที่สุด คือ? \n\r กด 1 เพื่อน \n\r กด 2 แฟน \n\r กด 3 พ่อแม่ \n\r กด 4 บุคคลอื่นๆ \n\r "; 
+					break;
+				}
 			$httpClient = new CurlHTTPClient($channel_token); 
 			$bot = new LINEBot($httpClient, array('channelSecret' => $channel_secret)); 
 
