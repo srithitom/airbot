@@ -1,5 +1,6 @@
 <?php
 require_once('./vendor/autoload.php');
+require_once('./config/connect.php');
 
 // Namespace 
 use \LINE\LINEBot\HTTPClient\CurlHTTPClient; 
@@ -7,7 +8,7 @@ use \LINE\LINEBot;
 use \LINE\LINEBot\MessageBuilder\TextMessageBuilder; 
 
 $channel_token = 'w+K1LISrRPx/YJz5WyOCqY/Hmm1/V+6bcwiZkjZguyGFHRfjaA02jJ8wxMk/JHW++Ykplb3CsSuWIrG6lrtg8d5DUf8CL5G5H39qOuPI44+yryZ2OXY62xDAFNKwYjz+PFPLSjwJ159TIyg/kF2h0AdB04t89/1O/w1cDnyilFU='; 
-$channel_secret = '5386d91fea3606a185e82e9d3b3670c8';
+$channel_secret = '5386d91fea3606a185e82e9d3b3670c8'; 
 
 // Get message from Line API
 $content = file_get_contents('php://input');
@@ -16,60 +17,37 @@ $events = json_decode($content, true);
 if (!is_null($events['events'])) { 
 
 	// Loop through each event 
-	foreach ($events['events'] as $event) {
+	foreach ($events['events'] as $event) { 
 
-		// Line API send a lot of event type, we interested in message only.
+		// Line API send a lot of event type, we interested in message only. 
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') { 
 
 			// Get replyToken 
 			$replyToken = $event['replyToken']; 
 
-			switch($event['message']['text']) { 
+			// Split message then keep it in database. 
+			$appointments = explode(',', $event['message']['text']); 
 
-				case 'tel':
-					$servername = '35.240.137.234';
-					$username = 'root';
-					$password = '123456totar';
-					$dbname = 'ecom';
-					// Create connection
-					$conn = new mysqli($servername, $username, $password, $dbname);
-					// Check connection
-					if ($conn->connect_error) {
-					    die("Connection failed: " . $conn->connect_error);
-					} 
+			if(count($appointments) == 2) { 
 
-					$sql = "select * from category";
-					$result = $conn->query($sql);
+				$host = 'ec2-54-243-212-227.compute-1.amazonaws.com'; 
+				$dbname = 'derp1q2mqmgk73'; 
+				$user = 'qhfmxvhvaduhkw';
+				$pass = '90b8104676e32efd9c1d98b72f3aba4c314ce0b9d6e82234f6c9fb56e6c60bd2'; 
+				$connection = new PDO("pgsql:host=$host;dbname=$dbname", $user, $pass); 
 
-					if ($result->num_rows > 0) {
-	    				// output data of each row
-	    				while($row = $result->fetch_assoc()) {
+				$params = array( 
+					'time' => $appointments[0], 
+					'content' => $appointments[1],
+				); 
 
-	    					// json_decode will give you a stdClass object after parsed
-	    					// so you'll access by $user->firstname;
-	        				$cate = json_decode($row['data']);
+				$statement = $connection->prepare("INSERT INTO appointments (time, content) VALUES (:time, :content)"); 
 
-							$respMessage = '$cate->name';
-						}
-					}else {
-	    				$respMessage = "0 results";
-					}
-					break; 
+				$result = $statement->execute($params); 
 
-				case 'address': 
-					$respMessage = '99/451 Muang Nonthaburi'; 
-					break; 
-
-				case 'boss': 
-					$respMessage = '089-2541545'; 
-					break; 
-
-				case 'idcard': 
-					$respMessage = '5845122451245'; 
-					break; 
-
-				default: 
-					break; 
+				$respMessage = 'Your appointment has saved.'; 
+			}else{ 
+				$respMessage = 'You can send appointment like this "12.00,House keeping." '; 
 			} 
 
 			$httpClient = new CurlHTTPClient($channel_token); 
@@ -77,6 +55,7 @@ if (!is_null($events['events'])) {
 
 			$textMessageBuilder = new TextMessageBuilder($respMessage); 
 			$response = $bot->replyMessage($replyToken, $textMessageBuilder); 
+
 		} 
 	} 
 } 
