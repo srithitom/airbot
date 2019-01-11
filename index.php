@@ -1,6 +1,5 @@
 <?php
 require_once('./vendor/autoload.php');
-require_once('./config/connect.php');
 
 // Namespace 
 use \LINE\LINEBot\HTTPClient\CurlHTTPClient; 
