@@ -59,4 +59,4 @@ if (!is_null($events['events'])) {
 	} 
 } 
 
-echo "OK";
+echo $result;
