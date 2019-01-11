@@ -40,7 +40,7 @@ if (!is_null($events['events'])) {
 					if($result){ 
 						$amount = $result->rowCount(); 
 					}
-					$respMessage = 'จำนวนคนตอบว่ำเพื่อน = '.$amount; 
+					$respMessage = 'จำนวนคนตอบว่ำเพื่อน = '.$result; 
 					break;
 					
 					default: 
