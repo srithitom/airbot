@@ -38,9 +38,10 @@ if (!is_null($events['events'])) {
 					$result = $connection->query($sql);
 					
 					if($result){ 
-						$amount = $result->rowCount(); 
+						//$res = $DB->query('SELECT COUNT(*) FROM table');
+						$num_rows = $result->fetchColumn(); 
 					}
-					$respMessage = 'จำนวนคนตอบว่ำเพื่อน = '.$amount; 
+					$respMessage = 'จำนวนคนตอบว่ำเพื่อน = '.$num_rows; 
 					break;
 					
 					default: 
