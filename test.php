@@ -12,7 +12,7 @@ echo "<table>\n";
 while ($line = pg_fetch_array($result)) {
     echo '<pre>'; print_r($line); echo '</pre>';
     var_dump($line);
-    echo $line->time '<br>';
+    echo $line[2];
     foreach($line as $res) {
     echo $res, '<br />';
 }
