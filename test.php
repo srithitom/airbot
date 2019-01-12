@@ -9,10 +9,10 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 // Printing results in HTML
 echo "<table>\n";
-while ($line = pg_fetch_array($result)) {
+while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo '<pre>'; print_r($line); echo '</pre>';
     var_dump($line);
-    echo $line[2];
+    echo $line["time"];
     foreach($line as $res) {
     echo $res, '<br />';
 }
