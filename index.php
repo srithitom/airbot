@@ -34,12 +34,13 @@ if (!is_null($events['events'])) {
 					$query = 'SELECT * FROM appointments';
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
-					while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
-    
-        $mes = 'จำนวนคนตอบว่ำเพื่อน = '.$line["content"];
-    
+					$views = array();
+while($row = pg_fetch_array($result)) {
+        $views[] = $row["content"];
 }
-					$respMessage = 'จำนวนคนตอบว่ำเพื่อน = '.$mes;
+$res = array($views);
+
+					$respMessage = json_encode($res,JSON_UNESCAPED_UNICODE);
 					
 					break;
 					
