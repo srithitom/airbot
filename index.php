@@ -38,9 +38,7 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 while($row = pg_fetch_array($result)) {
         $views[] = $row["content"];
 }
-$res=array($views);
-						$mes=var_dump($res);
-					$respMessage = json_encode($mes,JSON_UNESCAPED_UNICODE,JSON_PRETTY_PRINT);
+					$respMessage = json_encode($views,JSON_UNESCAPED_UNICODE,JSON_PRETTY_PRINT);
 					
 					break;
 					
