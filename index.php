@@ -36,10 +36,10 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 					$views = array();
 while($row = pg_fetch_array($result)) {
-        $views[] = $row["content"]'\n';
+        $views[] = $row["content"];
 }
-
-					$respMessage = json_encode(array($views),JSON_UNESCAPED_UNICODE,JSON_PRETTY_PRINT);
+$res=var_dump($views);
+					$respMessage = json_encode($res,JSON_UNESCAPED_UNICODE,JSON_PRETTY_PRINT);
 					
 					break;
 					
