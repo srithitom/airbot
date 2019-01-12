@@ -13,7 +13,8 @@ while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     echo '<pre>'; print_r($line); echo '</pre>';
     var_dump($line);
     foreach ($line as $key=>$item){
-    echo "$key => $item <br>";
+        if($key="time"){
+    echo "$key => $item <br>";}
 }
     foreach($line as $res) {
     echo $res, '<br />';
