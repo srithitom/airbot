@@ -36,7 +36,7 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 					$views = array();
 while($row = pg_fetch_array($result)) {
-        $views[] = $row["content"];
+        $views[] = $row["content"], 'br';
 }
 $res = array($views);
 
