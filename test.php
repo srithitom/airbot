@@ -8,21 +8,8 @@ $query = 'SELECT * FROM appointments';
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 // Printing results in HTML
-echo "<table>\n";
-while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
-    echo '<pre>'; print_r($line); echo '</pre>';
-    var_dump($line);
-    echo '<br />', $line["content"], '<br />';
-    foreach($line as $res) {
-    echo $res, '<br />';
-}
-    echo "\t<tr>\n";
-    foreach ($line as $col_value) {
-        echo "\t\t<td>$col_value</td>\n";
-    }
-    echo "\t</tr>\n";
-}
-echo "</table>\n";
+$line = pg_fetch_array($result, null, PGSQL_ASSOC));
+echo $line;
 
 // Free resultset
 pg_free_result($result);
