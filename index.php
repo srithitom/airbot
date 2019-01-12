@@ -38,12 +38,8 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 while($row = pg_fetch_array($result)) {
         $views[] = $row["content"];
 }
-						for ($x in $views){
-    // Now foo is a part of EVERY array and 
-    // will show up here as a value of 'x'.
-    console.log($x);
-}
-					$respMessage = json_encode($x,JSON_UNESCAPED_UNICODE,JSON_PRETTY_PRINT);
+				
+					$respMessage = json_encode($views,JSON_UNESCAPED_UNICODE);
 					
 					break;
 					
