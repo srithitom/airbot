@@ -36,9 +36,10 @@ $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 					while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
     
-        $respMessage = 'จำนวนคนตอบว่ำเพื่อน = '.$line["content"];
+        $mes = 'จำนวนคนตอบว่ำเพื่อน = '.$line["content"];
     
 }
+					$respMessage = 'จำนวนคนตอบว่ำเพื่อน = '.$mes;
 					
 					break;
 					
