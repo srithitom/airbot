@@ -8,9 +8,12 @@ $query = 'SELECT * FROM appointments';
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 // Printing results in HTML
-//$results=mysql_query($sql,$connection);
-$row = array();
-while($rows[]=pg_fetch_array($result));
+$views = array();
+while($row = pg_fetch_array($result)) {
+        $views[] = $row["content"];
+}
+$res = array($views);
+echo json_encode($res);
 
 //should not contain all rows
 print_r( $rows );
