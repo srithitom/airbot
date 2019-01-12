@@ -13,7 +13,7 @@ while($row = pg_fetch_array($result)) {
         $views[] = $row["content"];
 }
 $res = array($views);
-echo json_encode($res);
+echo json_encode($res,JSON_UNESCAPED_UNICODE);
 
 //should not contain all rows
 print_r( $rows );
