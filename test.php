@@ -8,8 +8,12 @@ $query = 'SELECT * FROM appointments';
 $result = pg_query($query) or die('Query failed: ' . pg_last_error());
 
 // Printing results in HTML
-$line = pg_fetch_array($result, null, PGSQL_ASSOC));
-echo $line;
+//$results=mysql_query($sql,$connection);
+$row = array();
+while($rows[]=pg_fetch_array($result));
+
+//should not contain all rows
+print_r( $rows );
 
 // Free resultset
 pg_free_result($result);
