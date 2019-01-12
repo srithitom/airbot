@@ -40,7 +40,7 @@ while($row = pg_fetch_array($result)) {
 }
 $res = array($views);
 
-					$respMessage = json_encode($res,JSON_UNESCAPED_UNICODE);
+					$respMessage = json_encode($res,JSON_UNESCAPED_UNICODE,JSON_PRETTY_PRINT);
 					
 					break;
 					
