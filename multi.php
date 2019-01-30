@@ -6,9 +6,6 @@
         .bggreen { background-color:#00FF00; }
         .bgred { background-color:#FF0000; }
         .bgyellow { background-color:#FFFF00; }
-        .bgg { background-color:#00FF00; }
-        .bgr { background-color:#FF0000; }
-        .bgy { background-color:#FFFF00; }
     </style>
 </head>
 <body>
@@ -39,21 +36,21 @@
     <table>
     <tr><th><big>ระดับคะแนน (เกรด)</big></th><th><big>คะแนน<big></th>
     </tr>
-    <tr class="bgg"><th>A</th><td>80 คะแนนขึ้นไป</td>
+    <tr bgcolor="#00FF00"><th>A</th><td>80 คะแนนขึ้นไป</td>
     </tr>
-    <tr class="bgg"><th>B+</th><td>75 – 79 คะแนน</td>
+    <tr bgcolor="#00FF00"><th>B+</th><td>75 – 79 คะแนน</td>
     </tr>
-    <tr class="bgg"><th>B</th><td>70 – 74 คะแนน</td>
+    <tr bgcolor="#00FF00"><th>B</th><td>70 – 74 คะแนน</td>
     </tr>
-    <tr class="bgy"><th>C+</th><td>65 – 69 คะแนน</td>
+    <tr bgcolor="#FFFF00"><th>C+</th><td>65 – 69 คะแนน</td>
     </tr>
-    <tr class="bgy"><th>C</th><td>60 – 64 คะแนน</td>
+    <tr bgcolor="#FFFF00"><th>C</th><td>60 – 64 คะแนน</td>
     </tr>
-    <tr class="bgy"><th>D</th><td>55 – 59 คะแนน</td>
+    <tr bgcolor="#FFFF00"><th>D</th><td>55 – 59 คะแนน</td>
     </tr>
-    <tr class="bgy"><th>C+</th><td>50 – 54 คะแนน</td>
+    <tr bgcolor="#FFFF00"><th>C+</th><td>50 – 54 คะแนน</td>
     </tr>
-    <tr class="bgr"><th>C+</th><td>0 – 49 คะแนน</td>
+    <tr bgcolor="#FF0000"><th>C+</th><td>0 – 49 คะแนน</td>
     </tr>
     </table>
     </center>
