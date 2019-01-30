@@ -14,21 +14,21 @@
         echo "<b><u>LAB5.2 เกรด</b></u><br>";
         $score = 70;
         if($score >= 80){
-            echo "$score คะแนน : ได้รับระดับเกรด A";
+            echo "<p class"bggreen">$score คะแนน : ได้รับระดับเกรด A</p>";
         }elseif($score >= 75){
-            echo "$score คะแนน : ได้รับระดับเกรด B+";
+            echo "<p class"bggreen">$score คะแนน : ได้รับระดับเกรด B+</p>";
         }elseif($score >= 70){
-            echo "$score คะแนน : ได้รับระดับเกรด B";
+            echo "<p class"bggreen">$score คะแนน : ได้รับระดับเกรด B</p>";
         }elseif($score >= 65){
-            echo "$score คะแนน : ได้รับระดับเกรด C+";
+            echo "<p class"bgyellow">$score คะแนน : ได้รับระดับเกรด C+</p>";
         }elseif($score >= 60){
-            echo "$score คะแนน : ได้รับระดับเกรด C";
+            echo "<p class"bgyellow">$score คะแนน : ได้รับระดับเกรด C</p>";
         }elseif($score >= 55){
-            echo "$score คะแนน : ได้รับระดับเกรด D+";
+            echo "<p class"bgyellow">$score คะแนน : ได้รับระดับเกรด D+</p>";
         }elseif($score >= 50){
-            echo "$score คะแนน : ได้รับระดับเกรด D";
+            echo "<p class"bgyellow">$score คะแนน : ได้รับระดับเกรด D</p>";
         }else{
-            echo "$score คะแนน : ได้รับระดับเกรด F";
+            echo "<p class"bgred">$score คะแนน : ได้รับระดับเกรด F</p>";
         }
     ?>
     </center>
