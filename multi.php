@@ -8,11 +8,12 @@
     <?php
         $i = 1;
         $num = 41;
-        echo "55543206041-9 number is 41 <br>";
+        echo "55543206041-9 สูตรคูณแม่ 41 <br>";
         do {
+            $mul=$num*$i;
             echo "<tr>
                     <th>41 x $i</th>
-                    <td> = (($num*$i))</td>
+                    <td> = $mul</td>
                    </tr>";
             $i += 1;
         } while ($i <= 12);
