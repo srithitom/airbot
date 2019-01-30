@@ -13,9 +13,7 @@
     <p><?php
         echo "<b><u>LAB5.2 เกรด</b></u><br>";
         $score = 49;
-        if($score < 0 || $score > 100){
-            echo "คุณกรอกคะแนนผิด กรุณากรอกอีกครั้ง"
-        }elseif($score >= 80){
+        if($score >= 80){
             echo "<span class=\"bggreen\">$score คะแนน : ได้รับระดับเกรด A</span>";
         }elseif($score >= 75){
             echo "<span class=\"bggreen\">$score คะแนน : ได้รับระดับเกรด B+</span>";
