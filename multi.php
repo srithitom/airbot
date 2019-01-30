@@ -27,7 +27,7 @@
             echo "<span class="bgyellow">$score คะแนน : ได้รับระดับเกรด D+</span>";
         }elseif($score >= 50){
             echo "<span class="bgyellow">$score คะแนน : ได้รับระดับเกรด D</span>";
-        }elseif($score < 50){
+        }else{
             echo "<span class="bgred">$score คะแนน : ได้รับระดับเกรด F</span>";
         }
     ?>
