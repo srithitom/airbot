@@ -12,7 +12,7 @@
         do {
             $mul=$num*$i;
             echo "<tr>
-                    <th>41 x $i</th>
+                    <td>41 x $i</td>
                     <td> = $mul</td>
                    </tr>";
             $i += 1;
