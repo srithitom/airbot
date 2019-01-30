@@ -13,7 +13,7 @@
             echo "<tr>
                     <th>41 x $i</th>
                     <td> = $num*$i</td>
-                   </tr>"
+                   </tr>";
             $i += 1;
         } while ($i <= 12);
     ?>
