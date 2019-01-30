@@ -6,9 +6,9 @@
         .bggreen { background-color:#00FF00; }
         .bgred { background-color:#FF0000; }
         .bgyellow { background-color:#FFFF00; }
-        .bgg tr { background-color:#00FF00; }
-        .bgr tr{ background-color:#FF0000; }
-        .bgy tr { background-color:#FFFF00; }
+        .bgg td { background-color:#00FF00; }
+        .bgr td { background-color:#FF0000; }
+        .bgy td { background-color:#FFFF00; }
     </style>
 </head>
 <body>
