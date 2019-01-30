@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
 </head>
 <body>
+    <center>
     <table>
     <?php
         $i = 1;
         $num = 41;
-        echo "55543206041-9 สูตรคูณแม่ 41 <br>";
+        echo "55543206041-9<br><b><u>สูตรคูณแม่ 41 </b></u><br>";
         do {
             $mul=$num*$i;
             echo "<tr>
@@ -19,5 +20,6 @@
         } while ($i <= 12);
     ?>
     </table>
+    </center>
 </body>
 </html>
