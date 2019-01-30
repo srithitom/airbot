@@ -8,7 +8,7 @@
         .bgyellow { background-color:#FFFF00; }
         th, td {
         border: 1px solid black;
-        padding: 10px;
+        padding: 5px;
         text-align: center;
         }
     </style>
