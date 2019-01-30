@@ -10,27 +10,27 @@
 </head>
 <body>
     <center>
-    <p><?php
+    <?php
         echo "<b><u>LAB5.2 เกรด</b></u><br>";
         $score = 70;
         if($score >= 80){
-            echo "<span class="bggreen">$score คะแนน : ได้รับระดับเกรด A</span>";
+            echo "$score คะแนน : ได้รับระดับเกรด A";
         }elseif($score >= 75){
-            echo "<span class="bggreen">$score คะแนน : ได้รับระดับเกรด B+</span>";
+            echo "$score คะแนน : ได้รับระดับเกรด B+";
         }elseif($score >= 70){
-            echo "<span class="bggreen">$score คะแนน : ได้รับระดับเกรด B</span>";
+            echo "$score คะแนน : ได้รับระดับเกรด B";
         }elseif($score >= 65){
-            echo "<span class="bgyellow">$score คะแนน : ได้รับระดับเกรด C+</span>";
+            echo "$score คะแนน : ได้รับระดับเกรด C+";
         }elseif($score >= 60){
-            echo "<span class="bgyellow">$score คะแนน : ได้รับระดับเกรด C</span>";
+            echo "$score คะแนน : ได้รับระดับเกรด C";
         }elseif($score >= 55){
-            echo "<span class="bgyellow">$score คะแนน : ได้รับระดับเกรด D+</span>";
+            echo "$score คะแนน : ได้รับระดับเกรด D+";
         }elseif($score >= 50){
-            echo "<span class="bgyellow">$score คะแนน : ได้รับระดับเกรด D</span>";
+            echo "$score คะแนน : ได้รับระดับเกรด D";
         }else{
-            echo "<span class="bgred">$score คะแนน : ได้รับระดับเกรด F</span>";
+            echo "$score คะแนน : ได้รับระดับเกรด F";
         }
-    ?></p>
+    ?>
     </center>
 </body>
 </html>
