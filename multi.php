@@ -1,25 +1,36 @@
 <html>
 <head>
-    <title>แม่สูตรคูณ</title>
+    <title>เกรด</title>
     <meta charset="UTF-8">
+    <style>
+        .bggreen { background-color:#00FF00; }
+        .bgred { background-color:#FF0000; }
+        .bgyellow { background-color:#FFFF00; }
+    </style>
 </head>
 <body>
     <center>
-    <table>
     <?php
-        $i = 1;
-        $num = 41;
-        echo "รหัสนักศึกษา 55543206041-9<br><b><u>สูตรคูณแม่ 41 </b></u><br>";
-        do {
-            $mul=$num*$i;
-            echo "<tr>
-                    <td>41 x $i</td>
-                    <td> = $mul</td>
-                   </tr>";
-            $i += 1;
-        } while ($i <= 12);
+        echo "<b><u>LAB5.2 เกรด</b></u><br>";
+        $score = 70;
+        if($score >= 80){
+            echo "<span class="bggreen">$score คะแนน : ได้รับระดับเกรด A</span>";
+        }elseif($score >= 75){
+            echo "<span class="bggreen">$score คะแนน : ได้รับระดับเกรด B+</span>";
+        }elseif($score >= 70){
+            echo "<span class="bggreen">$score คะแนน : ได้รับระดับเกรด B</span>";
+        }elseif($score >= 65){
+            echo "<span class="bgyellow">$score คะแนน : ได้รับระดับเกรด C+</span>";
+        }elseif($score >= 60){
+            echo "<span class="bgyellow">$score คะแนน : ได้รับระดับเกรด C</span>";
+        }elseif($score >= 55){
+            echo "<span class="bgyellow">$score คะแนน : ได้รับระดับเกรด D+</span>";
+        }elseif($score >= 50){
+            echo "<span class="bgyellow">$score คะแนน : ได้รับระดับเกรด D</span>";
+        }elseif($score < 50){
+            echo "<span class="bgred">$score คะแนน : ได้รับระดับเกรด F</span>";
+        }
     ?>
-    </table>
     </center>
 </body>
 </html>
