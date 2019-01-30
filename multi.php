@@ -6,6 +6,11 @@
         .bggreen { background-color:#00FF00; }
         .bgred { background-color:#FF0000; }
         .bgyellow { background-color:#FFFF00; }
+        th, td {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -30,7 +35,7 @@
         }else{
             echo "<span class=\"bgred\">$score คะแนน : ได้รับระดับเกรด F</span>";
         }
-    ?></p><br><br>
+    ?></p><br>
     <table>
     <tr><th>ระดับคะแนน (เกรด)</th><th>คะแนน</th>
     </tr>
