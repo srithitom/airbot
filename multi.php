@@ -10,7 +10,7 @@
 </head>
 <body>
     <center>
-    <?php
+    <p><?php
         echo "<b><u>LAB5.2 เกรด</b></u><br>";
         $score = 70;
         if($score >= 80){
@@ -30,7 +30,7 @@
         }else{
             echo "<span class="bgred">$score คะแนน : ได้รับระดับเกรด F</span>";
         }
-    ?>
+    ?></p>
     </center>
 </body>
 </html>
