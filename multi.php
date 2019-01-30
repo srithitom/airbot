@@ -10,7 +10,7 @@
 </head>
 <body>
     <center>
-    <?php
+    <div><?php
         echo "<b><u>LAB5.2 เกรด</b></u><br>";
         $score = 49;
         if($score >= 80 and $score <=100){
@@ -32,7 +32,7 @@
         }else{
             echo "คุณกรอกคะแนนผิด กรุณากรอกอีกครั้ง"
         }
-    ?><br><br>
+    ?></div><br><br>
     <table>
     <tr><th>ระดับคะแนน (เกรด)</th><th>คะแนน</th>
     </tr>
