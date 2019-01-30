@@ -17,7 +17,7 @@
     <center>
     <p><?php
         echo "<b><u>LAB5.2 เกรด</b></u><br>";
-        $score = 200;
+        $score = 100;
         if($score > 100){
             echo "คะแนนเกิน 100 กรุณากรอกคะแนนอีกครั้ง";
         }elseif($score >= 80){
