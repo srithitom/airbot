@@ -5,10 +5,10 @@
 			echo "<center><span style=\"color:red;background-color:#000000;\">วันเกิดไม่ถูกต้อง</span></center>";
 		include('form.php');
 		}elseif ($_POST["pass"]!= $_POST["repass"]){
-			echo "<center><span style=\"color:red;background-color:#000000;\">วันเกิดไม่ถูกต้อง</span></center>";
+			echo "<center><span style=\"color:red;background-color:#000000;\">รหัสผ่านไม่ตรงกัน</span></center>";
 		include('form.php');
 		}elseif (!isset($_POST["agree"])){
-			echo "<center><span style=\"color:red;background-color:#000000;\">วันเกิดไม่ถูกต้อง</span></center>";
+			echo "<center><span style=\"color:red;background-color:#000000;\">ไม่ได้ยอมรับข้อตกลง</span></center>";
 		include('form.php');
 		}else{
 		echo "<center><span style=\"color:red;background-color:#FFFFFF;\">ทำการสมัครเรียบร้อย</span></center>";
