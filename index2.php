@@ -18,7 +18,7 @@
 
 	<body background="bg1.jpg">
 		<center>
-			<img src="rocket.gif"><br><font color="brown" size="36"><b>ข้อมูลการสมัครสมาชิก</b><br><small>ชมรมวิทยาศาสตร์</small></font><br><br>
+			
 			<?
 			if (isset($_POST["submit_form"])) {
 		
@@ -29,7 +29,7 @@
 		 		}elseif (!isset($_POST["agree"])){
 		    		echo "<span style=\"color:red;background-color:#000000;\">ไม่ได้ยอมรับข้อตกลง</span>";
 				}else{
-		    		echo "เรียบร้อย";
+		    		echo "<img src="rocket.gif">"."<br>"."<font color="brown" size="36">"."<b>"."ข้อมูลการสมัครสมาชิก"."</b>"."<br>"."<small>"."ชมรมวิทยาศาสตร์"."</small>"."</font>"."<br>"."<br>";
 				}
 			}
 			?>
