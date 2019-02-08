@@ -1,5 +1,5 @@
 <?php
-	if (!isset($_POST["submit_form"])) {
+	if (isset($_POST["submit_form"])) {
 		
 		if(!checkdate($_POST["month"], $_POST["date"], $_POST["year"]-543)){
 		header('location: form.php');
