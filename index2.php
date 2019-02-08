@@ -29,7 +29,8 @@
 		 		}elseif (!isset($_POST["agree"])){
 		    		echo "<span style=\"color:red;background-color:#000000;\">ไม่ได้ยอมรับข้อตกลง</span>";
 				}else{
-		    		echo "<img src="rocket.gif">"."<br>"."<font color="brown" size="36">"."<b>"."ข้อมูลการสมัครสมาชิก"."</b>"."<br>"."<small>"."ชมรมวิทยาศาสตร์"."</small>"."</font>"."<br>"."<br>";
+		    		echo "<span style=\"color:red;background-color:#FFFFFF;\">ทำการสมัครเรียบร้อย</span>";
+		    		echo "<label for=\"name\"><span>ชื่อ-สกุล : </span>$_POST["name"] $_POST["lastname"]</label>";
 				}
 			}
 			?>
