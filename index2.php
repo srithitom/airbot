@@ -34,6 +34,6 @@
 				}
 			}
 			?>
-		<label for="name"><span>ชื่อ-สกุล : </span><?php echo $_POST["name"];?> <?php echo $_POST["name"];?></label>
+		<span>ชื่อ-สกุล : </span><?php echo $_POST["name"];?> <?php echo $_POST["name"];?>
 	</body>
 </html>
