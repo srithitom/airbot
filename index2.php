@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>แบบฟอร์มสมัครสมาชิกชมรมวิทยาศาสตร์</title>
+		<title>ข้อมูลสมัครสมาชิกชมรมวิทยาศาสตร์</title>
 		<meta charset="UTF-8">
 
 		<link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet">
@@ -16,18 +16,20 @@
 		</style>
 	</head>
 
+	<body>
 	<?
 	if (isset($_POST["submit_form"])) {
 
 		if(!checkdate($_POST["month"], $_POST["date"], $_POST["year"]-543)){
    			echo "<center><font color="red">วันเกิดไม่ถูกต้อง</font></center>";
-		}elseif ($_POST["pass"]!= $_POST["repass"]){
+		}if ($_POST["pass"]!= $_POST["repass"]){
      		echo "รหัสผ่านไม่ตรงกัน";
  		}elseif (!isset($_POST["agree"])){
     		echo "ไม่ได้ยอมรับข้อตกลง";
 		}else{
-    		echo "เรียบร้อย";
+    		echo "ไม่ได้ยอมรับข้อตกลง";
 		}
 	}
 	?>
+	</body>
 </html>
