@@ -22,12 +22,12 @@
 
 		if(!checkdate($_POST["month"], $_POST["date"], $_POST["year"]-543)){
    			echo "<center><font color="red">วันเกิดไม่ถูกต้อง</font></center>";
-		}if ($_POST["pass"]!= $_POST["repass"]){
+		}elseif ($_POST["pass"]!= $_POST["repass"]){
      		echo "รหัสผ่านไม่ตรงกัน";
  		}elseif (!isset($_POST["agree"])){
     		echo "ไม่ได้ยอมรับข้อตกลง";
 		}else{
-    		echo "ไม่ได้ยอมรับข้อตกลง";
+    		echo "เรียบร้อย";
 		}
 	}
 	?>
