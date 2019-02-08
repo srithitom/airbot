@@ -1,6 +1,6 @@
 <? 
-$dayth=array("","วันอาทิตย์","วันจันทร์","วันอังคาร","วันพุธ","วันพฤหัส","วันศุกร์","วันเสาร์"); 
-$month=array("","มกราคม","กุมภาพันธ์","มีนาคม","เมษายน","พฤษภาคม","มิถุนายน","กรกฎาคม","สิงหาคม","กันยายน","ตุลาคม","พฤศจิกายน","ธันวาคม"); 
+$dthai=array("","วันอาทิตย์","วันจันทร์","วันอังคาร","วันพุธ","วันพฤหัส","วันศุกร์","วันเสาร์"); 
+$mthai=array("","มกราคม","กุมภาพันธ์","มีนาคม","เมษายน","พฤษภาคม","มิถุนายน","กรกฎาคม","สิงหาคม","กันยายน","ตุลาคม","พฤศจิกายน","ธันวาคม"); 
 ?> 
 
 <html>
@@ -33,11 +33,21 @@ $month=array("","มกราคม","กุมภาพันธ์","มีน
 						<label for="lastname"><span>นามสกุล : </span><input type="text" name="lastname"></label>
 						<label for="gender"><span>เพศ : </span><input type="radio" name="gender" value="M"> ชาย
 						<input type="radio" name="gender" value="F"> หญิง</label>
-						<label for="bday"><span>วันเกิด : </span>
-							<select name="learn">
-								<?foreach($dayth as $val){
-									echo "<option value="01">$val</option>";
-									}?>
+						<label><span>วันเกิด : </span>
+							<select name="dth">
+								<?php for($i=1;$i<=7;$i++) { ?>
+  								<option value="<?php echo $i;?>"><?php echo $dthai[$i];?></option>
+								<?php } ?>
+							</select>
+							<select name="day">
+								<?php for($j=1;$i<=31;$j++) { ?>
+  								<option value="<?php echo $i;?>"><?php echo $i;?></option>
+								<?php } ?>
+							</select>
+							<select name="month">
+								<?php for($k=1;$i<=12;$k++) { ?>
+  								<option value="<?php echo $i;?>"><?php echo $mthai[$i];?></option>
+								<?php } ?>
 							</select>
 						</label>
 					</fieldset>
