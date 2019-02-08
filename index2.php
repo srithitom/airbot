@@ -21,7 +21,7 @@
 	if (isset($_POST["submit_form"])) {
 
 		if(!checkdate($_POST["month"], $_POST["date"], $_POST["year"]-543)){
-   			echo "วันเกิดไม่ถูกต้อง";
+   			echo "<font color="red">"."วันเกิดไม่ถูกต้อง"."</font>";
 		}elseif ($_POST["pass"]!= $_POST["repass"]){
      		echo "รหัสผ่านไม่ตรงกัน";
  		}elseif (!isset($_POST["agree"])){
