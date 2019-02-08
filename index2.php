@@ -34,9 +34,12 @@
 		}
 	}
 ?>
-		<span>ชื่อ-สกุล : </span><?php echo $_POST["name"];?> <?php echo $_POST["name"];?>
+		<span>ชื่อ-สกุล : </span><?php echo $_POST["name"];?> <?php echo $_POST["lastname"];?><br>
+		<span>เพศ : </span><?php echo $_POST["gender"];?><br>
+		<span>วันเกิด : </span><?php echo $_POST["dth"];?> <?php echo $_POST["date"];?> <?php echo $_POST["month"];?> พ.ศ.<?php echo $_POST["year"];?><br>
+		<span>Username : </span><?php echo $_POST["user"];?><br>
+		<span>Password : </span><?php echo $_POST["pass"];?><br>
+		<span>E-mail : </span><?php echo $_POST["emailadd"];?><br>
+		<span>วันที่ลงทะเบียน : </span><?php echo $_POST["gender"];?><br>
 	</body>
 </html>
-
-
-
