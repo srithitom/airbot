@@ -8,14 +8,6 @@
 		$mthai=array("","มกราคม","กุมภาพันธ์","มีนาคม","เมษายน","พฤษภาคม","มิถุนายน","กรกฎาคม","สิงหาคม","กันยายน","ตุลาคม","พฤศจิกายน","ธันวาคม");
 		return $mthai[$m];
 	}
-
-	if(!checkdate($_POST["month"], $_POST["date"], $_POST["year"]-543)){
-		echo "<center><span style=\"color:red;background-color:#000000;\">วันเกิดไม่ถูกต้อง</span></center>";
-		}elseif ($_POST["pass"]!= $_POST["repass"]){
-		echo "<center><span style=\"color:red;background-color:#000000;\">รหัสผ่านไม่ตรงกัน</span></center>";
-		}elseif (!isset($_POST["agree"])){
-		echo "<center><span style=\"color:red;background-color:#000000;\">ไม่ได้ยอมรับข้อตกลง</span></center>";
-		}
 ?> 
 
 <html>
