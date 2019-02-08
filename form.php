@@ -1,6 +1,6 @@
 <? 
 	function thaiday($d){
-		$dthai=array("","วันอาทิตย์","วันจันทร์","วันอังคาร","วันพุธ","วันพฤหัส","วันศุกร์","วันเสาร์");
+		$dthai=array("","วันอาทิตย์","วันจันทร์","วันอังคาร","วันพุธ","วันพฤหัสบดี","วันศุกร์","วันเสาร์");
 		return $dthai[$d];
 	}
 
@@ -69,6 +69,7 @@
 						<label for="pass"><span>Password : </span><input type="password" name="pass"></label>
 						<label for="repass"><span>Confirm Password : </span><input type="password" name="repass"></label>
 						<label for="emailadd"><span>E-mail : </span><input type="email" name="emailadd"></label>
+						<label for="agree"><input type="radio" name="agree" value="1">ยืนยันและยอมรับการสมัคร</label>
 					</fieldset>
 					<center><input type="submit" name="submit_form" value="บันทึก">
 					<input type="reset" name="reset_form" value="รีเซ็ต">
