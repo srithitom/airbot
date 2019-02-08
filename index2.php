@@ -17,6 +17,7 @@
 	</head>
 
 	<body>
+		<center>
 	<?
 	if (isset($_POST["submit_form"])) {
 
@@ -31,5 +32,6 @@
 		}
 	}
 	?>
+		</center>
 	</body>
 </html>
