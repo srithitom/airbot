@@ -40,12 +40,12 @@ $mthai=array("","มกราคม","กุมภาพันธ์","มีน
 								<?php } ?>
 							</select>
 							<select name="day">
-								<?php for($j=1;$i<=31;$j++) { ?>
+								<?php for($j=1;$j<=31;$j++) { ?>
   								<option value="<?php echo $i;?>"><?php echo $i;?></option>
 								<?php } ?>
 							</select>
 							<select name="month">
-								<?php for($k=1;$i<=12;$k++) { ?>
+								<?php for($k=1;$k<=12;$k++) { ?>
   								<option value="<?php echo $i;?>"><?php echo $mthai[$i];?></option>
 								<?php } ?>
 							</select>
