@@ -1,6 +1,13 @@
 <? 
-$dthai=array("","วันอาทิตย์","วันจันทร์","วันอังคาร","วันพุธ","วันพฤหัส","วันศุกร์","วันเสาร์"); 
-$mthai=array("","มกราคม","กุมภาพันธ์","มีนาคม","เมษายน","พฤษภาคม","มิถุนายน","กรกฎาคม","สิงหาคม","กันยายน","ตุลาคม","พฤศจิกายน","ธันวาคม"); 
+	function thaiday($d){
+		$dthai=array("","วันอาทิตย์","วันจันทร์","วันอังคาร","วันพุธ","วันพฤหัส","วันศุกร์","วันเสาร์");
+		return $dthai[$d];
+	}
+
+	function thaimonth($m){
+		$mthai=array("","มกราคม","กุมภาพันธ์","มีนาคม","เมษายน","พฤษภาคม","มิถุนายน","กรกฎาคม","สิงหาคม","กันยายน","ตุลาคม","พฤศจิกายน","ธันวาคม");
+		return $mthai[$m];
+	}
 ?> 
 
 <html>
@@ -36,17 +43,22 @@ $mthai=array("","มกราคม","กุมภาพันธ์","มีน
 						<label><span>วันเกิด : </span>
 							<select name="dth">
 								<?php for($i=1;$i<=7;$i++) { ?>
-  								<option value="<?php echo $i;?>"><?php echo $dthai[$i];?></option>
+  								<option value="<?php echo $i;?>"><?php echo thaiday($i);?></option>
 								<?php } ?>
 							</select>
-							<select name="day">
+							<select name="date">
 								<?php for($j=1;$j<=31;$j++) { ?>
   								<option value="<?php echo $j;?>"><?php echo $j;?></option>
 								<?php } ?>
 							</select>
 							<select name="month">
 								<?php for($k=1;$k<=12;$k++) { ?>
-  								<option value="<?php echo $k;?>"><?php echo $mthai[$k];?></option>
+  								<option value="<?php echo $k;?>"><?php echo thaimonth($k);?></option>
+								<?php } ?>
+							</select>
+							<select name="year">
+								<?php for($l=2562;$l<=2500;$l--) { ?>
+  								<option value="<?php echo $l;?>"><?php echo $l;?></option>
 								<?php } ?>
 							</select>
 						</label>
