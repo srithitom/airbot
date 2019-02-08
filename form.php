@@ -71,9 +71,7 @@
 						<label for="emailadd"><span>E-mail : </span><input type="email" name="emailadd"></label>
 						<label for="agree"><input type="radio" name="agree" value="1">ยืนยันและยอมรับการสมัคร</label>
 					</fieldset>
-					<center><input type="submit" name="submit_form" value="บันทึก">
-					<input type="reset" name="reset_form" value="รีเซ็ต">
-					<input type="button" name="cancel_form" value="ยกเลิก"></center>
+					<center><input type="submit" name="submit_form" value="บันทึก"></center>
 				</form>
 			</div>
 	</body>
