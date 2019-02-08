@@ -57,7 +57,7 @@
 								<?php } ?>
 							</select>
 							<select name="year">
-								<?php for($l=2562;$l<=2500;$l--) { ?>
+								<?php for($l=2562;$l>=2500;$l--) { ?>
   								<option value="<?php echo $l;?>"><?php echo $l;?></option>
 								<?php } ?>
 							</select>
