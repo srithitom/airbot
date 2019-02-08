@@ -30,7 +30,6 @@
 		    		echo "<span style=\"color:red;background-color:#000000;\">ไม่ได้ยอมรับข้อตกลง</span>";
 				}else{
 		    		echo "<span style=\"color:red;background-color:#FFFFFF;\">ทำการสมัครเรียบร้อย</span>";
-		    		echo "<label for=\"name\"><span>ชื่อ-สกุล : </span>$_POST["name"] $_POST["lastname"]</label>";
 				}
 			}
 			?>
