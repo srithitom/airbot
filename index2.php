@@ -1,4 +1,23 @@
-<?php
+<html>
+	<head>
+		<title>ข้อมูลการสมัครสมาชิกชมรมวิทยาศาสตร์</title>
+		<meta charset="UTF-8">
+
+		<link href="https://fonts.googleapis.com/css?family=Mali" rel="stylesheet">
+		<link href="form.css" rel="stylesheet">
+    	<style>
+      		body {
+        	font-family: 'Mali', cursive;
+        	font-size: 36px;
+      		}
+			fieldset {
+			 margin-bottom: 1em;
+			}    
+		</style>
+	</head>
+
+	<body background="bg1.jpg">
+			<?php
 	if (isset($_POST["submit_form"])) {
 		
 		if(!checkdate($_POST["month"], $_POST["date"], $_POST["year"]-543)){
@@ -15,5 +34,9 @@
 		}
 	}
 ?>
+		<span>ชื่อ-สกุล : </span><?php echo $_POST["name"];?> <?php echo $_POST["name"];?>
+	</body>
+</html>
+
 
 
